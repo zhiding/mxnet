@@ -149,6 +149,14 @@ dataset.coco.root_path = 'data'
 dataset.coco.dataset_path = 'data/coco'
 dataset.coco.NUM_CLASSES = 81
 
+# Landmarks dataset
+dataset.Landmarks = edict()
+dataset.Landmarks.dataset = 'Landmarks'
+dataset.Landmarks.image_set = 'train'
+dataset.Landmarks.test_image_set = 'val'
+dataset.Landmarks.root_path = 'data'
+dataset.Landmarks.dataset_path = 'data/Landmarks'
+dataset.Landmarks.NUM_CLASSES = 587
 
 def generate_config(_network, _dataset):
     for k, v in network[_network].items():
@@ -161,4 +169,3 @@ def generate_config(_network, _dataset):
             config[k] = v
         elif k in default:
             default[k] = v
-
